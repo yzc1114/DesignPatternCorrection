@@ -13,40 +13,24 @@ public class AbstractFactoryPatternTest {
         DreamIsland dis=DreamIsland.getInstance();
         DreamIsland.init();
 
-        boolean ifContinue = true;
-
-        while(ifContinue){
-            System.out.println("\n"+"请输入您要创建的新设施名称：");
-            Scanner sc = new Scanner(System.in);
-            String mName=sc.next();
-            while (dis.getFacilitie(mName)!=null)
-            {
-                System.out.println("已经存在名为"+mName+"的区域或设施，请重新输入名称！");
-                mName=sc.next();
-            }
-            Facilitie mfc=dis.getFacilitie(mName,1);
-            System.out.println("使用设施工厂创建设施成功");
-            System.out.println("\n"+"请输入您要创建的新设施所在的区域名：");
-            String fcParentArea=sc.next();
-            while(dis.getFacilitie(fcParentArea)==null||fcParentArea.equals(mName)||dis.getFacilitie(fcParentArea).returnType()==1)
-            {
-                System.out.println("请输入正确的名字！");
-                fcParentArea=sc.next();
-            }
-            dis.getFacilitie(fcParentArea).addChild(mfc);
-            while(true){
-                System.out.println("是否继续？（y/n）");
-                String inputIfContinue = sc.next();
-                if(inputIfContinue.equalsIgnoreCase("y")){
-                    ifContinue = true;
-                    break;
-                }else if(inputIfContinue.equalsIgnoreCase("n")){
-                    ifContinue = false;
-                    break;
-                }
-            }
+        System.out.println("\n"+"请输入您要创建的新设施名称：");
+        Scanner sc = new Scanner(System.in);
+        String mName=sc.next();
+        while (dis.getFacilitie(mName)!=null)
+        {
+            System.out.println("已经存在名为"+mName+"的区域或设施，请重新输入名称！");
+            mName=sc.next();
         }
-
+        Facilitie mfc=dis.getFacilitie(mName,1);
+        System.out.println("使用设施工厂创建设施成功");
+        System.out.println("\n"+"请输入您要创建的新设施所在的区域名：");
+        String fcParentArea=sc.next();
+        while(dis.getFacilitie(fcParentArea)==null||fcParentArea.equals(mName)||dis.getFacilitie(fcParentArea).returnType()==1)
+        {
+            System.out.println("请输入正确的名字！");
+            fcParentArea=sc.next();
+        }
+        dis.getFacilitie(fcParentArea).addChild(mfc);
         System.out.println("\n"+"当前游乐园结构为：");
         System.out.println(dis.getFacilitie("DreamIsland").printAll());
         System.out.println("----------------------------------------" + "\n");

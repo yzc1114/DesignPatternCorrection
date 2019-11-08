@@ -9,8 +9,9 @@ public class BuilderPatternTest {
     public static void builderPatternTest() {
         Director director = new Director();
         MealBuilder A_mealbuilder=new AMealBuilder();
+        MealBuilder B_mealbuilder=new BMealBuilder();
         director.setMealBuilder(A_mealbuilder);
-        director.constructMeal();
+        director.constructMeal();;
         NormalMeal mealA=director.getMeal();
         System.out.println("\n" +"----------------------------------------");
         System.out.println("29. 建造者模式(Builder)：");
@@ -21,14 +22,15 @@ public class BuilderPatternTest {
         System.out.println("Total Cost: " +mealA.getCost());
         System.out.println("创建A套餐成功");
 
-        director.setMealBuilder(A_mealbuilder);
+        director.setMealBuilder(B_mealbuilder);
         director.constructMeal();;
-        NormalMeal mealB = director.getMeal();
-        System.out.println("再次创建A套餐");
-        System.out.println("A Meal");
+        NormalMeal mealB=director.getMeal();
+        System.out.println("创建B套餐");
+        System.out.println("B Meal");
         mealB.showItems();
         System.out.println("Total Cost: " +mealB.getCost());
-        System.out.println("创建A套餐成功");
+        System.out.println("创建B套餐成功");
         System.out.println("----------------------------------------" + "\n");
+
     }
 }
