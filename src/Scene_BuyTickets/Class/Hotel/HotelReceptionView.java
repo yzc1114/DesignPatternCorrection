@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class HotelReceptionView {
     public void show(){
         Hotel hotel = Hotel.getInstance();
-        System.out.println("欢迎使用酒店前台登记系统");
+        System.out.println("欢迎使用酒店前台登记系统,您可以在查看空闲房间后办理预定房间哦！");
         System.out.println("1 查询所有空闲房间");
         System.out.println("2 查询指定类型空闲房间");
-        System.out.println("3 办理入住");
-        System.out.println("4 办理退房");
+        System.out.println("3 预定房间");
+        System.out.println("4 取消预订");
         System.out.println("0 退出系统");
         System.out.print("请输入您要使用的业务序号：");
         Scanner sc = new Scanner(System.in);
@@ -41,7 +41,7 @@ public class HotelReceptionView {
                     num = sc.next();
                     break;
                 case "3": //办理入住
-                    System.out.print("请输入要入住的房间号：");
+                    System.out.print("请输入要预约入住的房间号：");
                     String _room_id = sc.next();
                     System.out.print("请输入要入住的人数：");
                     int _tourist_number = sc.nextInt();
@@ -58,7 +58,7 @@ public class HotelReceptionView {
                     num = sc.next();
                     break;
                 case "4": //办理退房
-                    System.out.print("请输入要退房的房间号：");
+                    System.out.print("请输入要取消预约的房间号：");
                     String room_id = sc.next();
                     hotel.liveOut(room_id);
                     System.out.print("请输入您要使用的业务序号：");

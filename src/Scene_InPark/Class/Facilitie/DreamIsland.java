@@ -14,7 +14,7 @@ public class DreamIsland {
 	public static DreamIsland getInstance()
 	{
 		//返回单例
-//		System.out.println("DreamIsland：getInstance:取得梦幻岛单例");
+		System.out.println("我是梦幻岛，我生成了一个实例，并且把这个实例返回了。不要希望我会生成其他实例哦！因为我是Singleton~");
 		return singleton;
 	}
 	//将所有设施及其名字作为享元
