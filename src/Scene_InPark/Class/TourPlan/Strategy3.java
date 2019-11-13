@@ -7,18 +7,18 @@ public class Strategy3 extends Strategy {
         this.des1 = des1;
         this.des2 = des2;
         this.des3 = des3;
-        this.advantage = "花钱少";
+        this.advantage = "好得快";
     }
 
     //重写父类方法，打印具体优势
     @Override
     public void showAdvantage() {
-        System.out.println("花钱少");
+        System.out.println("好得快");
     }
 
     //重写父类方法，返回字符串类型的具体优势
     @Override
     public String getAdvantage() {
-        return "花钱少";
+        return "好得快";
     }
 }

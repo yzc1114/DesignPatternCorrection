@@ -9,7 +9,7 @@ import java.util.HashMap;
  */
 public class FloatParade {
     //花车名字
-    private String[] names = {"米奇花车", "白雪公主花车", "小飞象花车", "玩具总动员花车"};
+    private String[] names = {"米奇花车", "白雪公主花车", "小飞象花车", "玩具总动员花车", "灰姑娘花车"};
 
     //存储的花车序列
     private ArrayList<Floats> floats = new ArrayList<>();

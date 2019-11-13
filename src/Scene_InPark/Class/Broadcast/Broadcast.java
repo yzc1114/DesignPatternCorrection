@@ -31,7 +31,7 @@ public class Broadcast {
             notifyAllTourists();
         }
         else{
-            System.out.println("游园并未改变，仍为开放中");
+            System.out.println("游园处于开放中");
         }
     }
 

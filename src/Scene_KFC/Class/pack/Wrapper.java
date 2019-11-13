@@ -20,7 +20,7 @@ public class Wrapper extends Packing {
     }
 
     //成员函数无法改变成员变量符合弱不变模式
-    public void setMaterial(){
+    public void setMaterial(String Material){
 
     }
 

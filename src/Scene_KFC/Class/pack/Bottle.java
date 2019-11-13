@@ -28,4 +28,9 @@ public class Bottle extends Packing {
     public String getMaterial(){
         return this.material;
     }
+
+    @Override
+    public void setMaterial(String Material) {
+
+    }
 }
