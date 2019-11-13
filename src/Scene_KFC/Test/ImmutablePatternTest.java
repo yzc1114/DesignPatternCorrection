@@ -10,15 +10,15 @@ import java.lang.reflect.Parameter;
 public class ImmutablePatternTest {
     public static void immutablePatternTest() {
         BigMac bigmac=new BigMac();
-        Packing wrapper=bigmac.packing();
+        Packing wrapper = bigmac.packing();
         System.out.println("\n" +"----------------------------------------");
         System.out.println("28. 不变模式(Immutable)：");
         System.out.println("\n测试:");
-        System.out.println("修改之前的材料"+wrapper.getMaterial());
-        wrapper.setMaterial();
-        System.out.println("尝试使用setMaterial()函数进行修改");
-        System.out.println("修改之后的材料"+wrapper.getMaterial());
-        System.out.println("材料没有发生变化,符合不变模式");
+        System.out.println("巨无霸汉堡的包装是："+wrapper.getMaterial());
+        wrapper.setMaterial("plastic");
+        System.out.println("我现在要把巨无霸汉堡的包装变为：plastic");
+        System.out.println("修改之后，巨无霸汉堡的包装是："+wrapper.getMaterial());
+        System.out.println("设置失败，因为包装纸采用了不变模式。");
         System.out.println("----------------------------------------" + "\n");
 
 
