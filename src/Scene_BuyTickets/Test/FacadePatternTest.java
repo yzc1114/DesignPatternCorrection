@@ -9,7 +9,7 @@ public class FacadePatternTest {
         System.out.println("\n测试一:");
         System.out.println("连接门面函数测试");
         Pool pool = new Pool();
-        String userName = "小王";
+        String userName = "卢本伟";
         Connection connection = new Connection(userName);
         ConnectManager connectManager = new ConnectManager(userName, connection, pool);
         System.out.println("用户 " + userName + " 请求连接至迪士尼官网");
