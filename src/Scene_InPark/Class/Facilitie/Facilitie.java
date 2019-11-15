@@ -1,7 +1,8 @@
 package Scene_InPark.Class.Facilitie;
 
 public abstract class Facilitie {
-	protected String name;
+
+    protected String name;
 	protected Facilitie parent;
 	protected int TouristFlow;
 	protected int type;
