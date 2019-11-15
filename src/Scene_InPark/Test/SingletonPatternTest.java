@@ -10,7 +10,7 @@ public class    SingletonPatternTest {
         System.out.println("10. 单例模式(Singleton)：");
         System.out.println("\n"+"测试：");
         DreamIsland dis=DreamIsland.getInstance();
-        System.out.println("调用getInstance获取单例成功，准备进行设施初始化");
+//        System.out.println("调用getInstance获取单例成功，准备进行设施初始化");
         DreamIsland.init();
         System.out.println("----------------------------------------" + "\n");
     }

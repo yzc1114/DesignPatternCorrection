@@ -34,7 +34,7 @@ public class MementoPatternTest {
         //获得花车游行类实例
         FloatParade floatParade = FloatParade.getInstance();
         //初始化部分命令
-        Command commands[] = {new ReverseOrderCommand(), new RandomOrderCommand(), new OriginalOrderCommand()};
+        Command commands[] = {new RandomOrderCommand(), new RandomOrderCommand(), new ReverseOrderCommand()};
         //打印初始花车游行序列
         System.out.print("花车初始序列: ");
         printName(floatParade);
@@ -42,18 +42,13 @@ public class MementoPatternTest {
         //执行一遍初始化的三个命令，并打印执行后花车游行序列、
         System.out.println("执行三个命令:");
         for (int i = 0; i < commands.length; i++) {
+            System.out.println("第"+i+"条指令的执行结果");
             commands[i].execute();
             printName(floatParade);
+            System.out.println("回退结果");
+            Command.undo();
+            printName(floatParade);
         }
-        //使用undo操作回退，测试备忘录
-        System.out.println("使用undo操作回退两个命令:");
-        Command.undo();
-        System.out.print("回退结果一: ");
-        printName(floatParade);
-        Command.undo();
-        System.out.print("回退结果二: ");
-        printName(floatParade);
-
         System.out.println("----------------------------------------" + "\n");
     }
 }
