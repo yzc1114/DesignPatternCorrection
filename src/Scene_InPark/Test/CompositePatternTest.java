@@ -13,7 +13,7 @@ public class CompositePatternTest {
         DreamIsland.init();
 
         //查询区域
-        System.out.println("\n"+"测试一：");
+        System.out.println("\n"+"查询区域：");
         System.out.println("游乐园调用printAll和printDirectory打印区域内容和位置");
         System.out.println("请输入您要查询的区域名：");
         Scanner sc = new Scanner(System.in);
@@ -37,7 +37,7 @@ public class CompositePatternTest {
         System.out.println(dis.getFacilitie(findAreaName).printDirectory());
 
         //查询设施
-        System.out.println("\n"+"测试二：");
+        System.out.println("\n"+"查询设施：");
         System.out.println("游乐园调用printAll和printDirectory打印设施内容和位置");
         System.out.println("请输入您要查询的设施名：");
         String findFcName=sc.next();

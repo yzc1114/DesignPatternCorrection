@@ -21,7 +21,6 @@ public class BuilderPatternTest {
         mealA.showItems();
         System.out.println("Total Cost: " +mealA.getCost());
         System.out.println("创建A套餐成功");
-
         director.setMealBuilder(B_mealbuilder);
         director.constructMeal();;
         NormalMeal mealB=director.getMeal();
